@@ -13,7 +13,7 @@ class MoviesDAO:
             return query.get(mid)
         if kwargs:
             for kye, value in kwargs.items():
-                query = query.filter(eval(f"Movie.{kye}") == int(value))
+                query = query.filter(getattr(Movie, kye) == int(value))
         return query.all()
 
     def create(self, data):
