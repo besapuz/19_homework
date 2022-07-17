@@ -1,8 +1,8 @@
 from doa.movies import MoviesDAO
-from doa.services.movie import MovieService
-from doa.services.director import DirectorService
+from services import MovieService
+from services.director import DirectorService
 from doa.directors import DirectorDAO
-from doa.services.genre import GenreService
+from services.genre import GenreService
 from doa.genres import GenreDAO
 from setup_db import db
 
